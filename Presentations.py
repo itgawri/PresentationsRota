@@ -15,23 +15,3 @@ if len(most_frequent_presenter) > 1:
   print(f"The people we'll be hearing the most from are {most_frequent_presenter}.")
 else:
   print(f"The person we'll be hearing the most from is {most_frequent_presenter[0]}.")
-
-# PL------------------------------------------------------------------------------------------
-
-from random import choice
-from statistics import multimode
-
-rota = []
-studenci = ["Norm", "Gina", "Michael", "Jacob", "Rosa", "Raymond", "Terence", "Amy", "Charles", "Kevin"]
-
-for i in range(20):
-  wybrany = choice(studenci)
-  rota.append(wybrany)
-  print(f'Na {i+1} tydzień, wybrano {wybrany} do podzielenia się refleksją.')
-
-najczestszy_prelegent = multimode(rota)
-
-if len(najczestszy_prelegent) > 1:
-  print(f"Najwięcej będziemy słuchać od {najczestszy_prelegent}.")
-else:
-  print(f"Najwięcej będziemy słuchać od {najczestszy_prelegent[0]}.")
